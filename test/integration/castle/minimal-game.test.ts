@@ -218,9 +218,9 @@ describe('A minimal game', () => {
                 game = action.confirm()
               })
 
-              it('the game is over') // TODO
+              it.skip('the game is over', () => {})
 
-              it('Alice has won the game') // TODO
+              it.skip('Alice has won the game', () => {})
             })
           })
         })

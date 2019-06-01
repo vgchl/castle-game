@@ -7,7 +7,6 @@ export class TileSetStandard extends TileSet {
   constructor () {
     const tiles = List([
       new TileD(),
-      new TileV(),
       new TileD(),
       new TileD(),
       new TileV(),
