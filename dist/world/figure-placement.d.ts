@@ -1,0 +1,10 @@
+import { PlacedFigure } from './placed-figure';
+import { List } from 'immutable';
+import { Figure } from './figure';
+import { PlacedTile } from './placed-tile';
+import { Player } from '../player';
+import { World } from './world';
+export declare function getPossibleFollowerPlacements(world: World, figure: Figure, placedTile: PlacedTile, player: Player): List<PlacedFigure>;
+export declare function getPossibleBuilderPlacements(world: World, placedTile: PlacedTile, player: Player): List<PlacedFigure>;
+export declare function getPossibleFairyPlacements(world: World, player: Player): List<PlacedFigure>;
+export declare function getPossibleDragonPlacements(world: World): List<PlacedFigure>;

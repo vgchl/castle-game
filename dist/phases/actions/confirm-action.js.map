@@ -1,0 +1,1 @@
+{"version":3,"file":"confirm-action.js","sourceRoot":"","sources":["../../../src/castle/phases/actions/confirm-action.ts"],"names":[],"mappings":";;AAAA,qCAAiC;AAEjC,gDAA2C;AAE3C,mBAA2B,SAAQ,eAAM;IAEhC,OAAO;QACZ,OAAO,IAAI,CAAC,IAAI,CAAC,GAAG,CAAC;YACnB,KAAK,EAAE,IAAI,wBAAU,EAAE;SACxB,CAAC,CAAA;IACJ,CAAC;CAEF;AARD,sCAQC"}
