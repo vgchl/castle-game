@@ -1,0 +1,29 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "configurations": [
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Run unit tests",
+      "program": "${workspaceFolder}/node_modules/jest/bin/jest.js",
+      "args": [
+        "--config",
+        "test/unit/jest.config.js"
+      ],
+      "console": "internalConsole"
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Run integration tests",
+      "program": "${workspaceFolder}/node_modules/jest/bin/jest.js",
+      "args": [
+        "--config",
+        "test/integration/jest.config.js"
+      ],
+      "console": "internalConsole"
+    }
+  ]
+}
