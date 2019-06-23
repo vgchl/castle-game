@@ -5,15 +5,15 @@ import { Player } from '../player'
 
 export class PlacedFigure {
 
-  public static placedOnSegment(
+  public static placedOnSegment (
     figure: Figure,
     placedSegment: PlacedSegment,
-    player: Player,
+    player: Player
   ): PlacedFigure {
     return new PlacedFigure(figure, player, placedSegment)
   }
 
-  public static placedOnTile(
+  public static placedOnTile (
     figure: Figure,
     placedTile: PlacedTile,
     player: Player
@@ -21,11 +21,11 @@ export class PlacedFigure {
     return new PlacedFigure(figure, player, undefined, placedTile)
   }
 
-  private constructor(
+  private constructor (
     public readonly figure: Figure,
     public readonly player: Player,
     public readonly placedSegment?: PlacedSegment,
-    public readonly placedTile?: PlacedTile,
+    public readonly placedTile?: PlacedTile
   ) {}
 
 }
