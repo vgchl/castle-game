@@ -1,1 +1,1 @@
-{"version":3,"file":"city-segment.js","sourceRoot":"","sources":["../../src/castle/world/city-segment.ts"],"names":[],"mappings":";;AAAA,uCAAmC;AAEnC,iBAAyB,SAAQ,iBAAO;IAAxC;;QAEkB,kBAAa,GAAY,IAAI,CAAA;IAE/C,CAAC;CAAA;AAJD,kCAIC"}
+{"version":3,"file":"city-segment.js","sourceRoot":"","sources":["../../src/castle/world/city-segment.ts"],"names":[],"mappings":";;AAAA,uCAAmC;AAEnC,MAAa,WAAY,SAAQ,iBAAO;IAAxC;;QACkB,kBAAa,GAAY,IAAI,CAAA;IAC/C,CAAC;CAAA;AAFD,kCAEC"}

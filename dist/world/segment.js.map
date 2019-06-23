@@ -1,1 +1,1 @@
-{"version":3,"file":"segment.js","sourceRoot":"","sources":["../../src/castle/world/segment.ts"],"names":[],"mappings":";;AAAA;IAEE,YAA6B,EAAU;QAAV,OAAE,GAAF,EAAE,CAAQ;IAAI,CAAC;CAI7C;AAND,0BAMC"}
+{"version":3,"file":"segment.js","sourceRoot":"","sources":["../../src/castle/world/segment.ts"],"names":[],"mappings":";;AAAA,MAAsB,OAAO;IAC3B,YAA6B,EAAU;QAAV,OAAE,GAAF,EAAE,CAAQ;IAAI,CAAC;CAG7C;AAJD,0BAIC"}

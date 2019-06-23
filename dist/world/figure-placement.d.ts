@@ -7,4 +7,4 @@ import { World } from './world';
 export declare function getPossibleFollowerPlacements(world: World, figure: Figure, placedTile: PlacedTile, player: Player): List<PlacedFigure>;
 export declare function getPossibleBuilderPlacements(world: World, placedTile: PlacedTile, player: Player): List<PlacedFigure>;
 export declare function getPossibleFairyPlacements(world: World, player: Player): List<PlacedFigure>;
-export declare function getPossibleDragonPlacements(world: World): List<PlacedFigure>;
+export declare function getPossibleDragonPlacements(world: World, player: Player): List<PlacedFigure>;

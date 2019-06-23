@@ -119,7 +119,7 @@ class World {
             case figure_1.Figure.fairy:
                 return figure_placement_1.getPossibleFairyPlacements(this, player);
             case figure_1.Figure.dragon:
-                return figure_placement_1.getPossibleDragonPlacements(this);
+                return figure_placement_1.getPossibleDragonPlacements(this, player);
             default:
                 throw new Error('Unknown follower type');
         }
@@ -145,9 +145,9 @@ class World {
      */
     isOccupied(placedSegment, player) {
         return this.figures.some(placedFigure => {
-            return placedFigure.placedSegment.equals(placedSegment)
-                && !placedFigure.figure.isNeutral
-                && (!player || placedFigure.player === player);
+            return placedFigure.placedSegment.equals(placedSegment) &&
+                !placedFigure.figure.isNeutral &&
+                (!player || placedFigure.player === player);
         });
     }
     // TODO: Support cloisters

@@ -8,7 +8,6 @@ class TileSetStandard extends tile_set_1.TileSet {
     constructor() {
         const tiles = immutable_1.List([
             new tile_d_1.TileD(),
-            new tile_v_1.TileV(),
             new tile_d_1.TileD(),
             new tile_d_1.TileD(),
             new tile_v_1.TileV(),

@@ -1,1 +1,1 @@
-{"version":3,"file":"farm-segment.js","sourceRoot":"","sources":["../../src/castle/world/farm-segment.ts"],"names":[],"mappings":";;AAAA,uCAAmC;AAEnC,iBAAyB,SAAQ,iBAAO;IAAxC;;QAEkB,kBAAa,GAAY,KAAK,CAAA;IAEhD,CAAC;CAAA;AAJD,kCAIC"}
+{"version":3,"file":"farm-segment.js","sourceRoot":"","sources":["../../src/castle/world/farm-segment.ts"],"names":[],"mappings":";;AAAA,uCAAmC;AAEnC,MAAa,WAAY,SAAQ,iBAAO;IAAxC;;QACkB,kBAAa,GAAY,KAAK,CAAA;IAChD,CAAC;CAAA;AAFD,kCAEC"}

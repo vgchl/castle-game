@@ -19,8 +19,7 @@ class ScorePhase extends phase_1.Phase {
     }
     getCompletedProperties(game) {
         return game.world.figures
-            .filter(placedFigure => placedFigure.figure.isFollower)
-            .filter(placedFigure => placedFigure.placedSegment.segment.isCompletable)
+            .filter(placedFigure => placedFigure.figure.isFollower && placedFigure.placedSegment.segment.isCompletable)
             .map(placedFigure => game.world.getConnectedSegments(placedFigure.placedSegment).toSet())
             .filter(propertySegments => game.world.isCompleted(propertySegments));
     }
