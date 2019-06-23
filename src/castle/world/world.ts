@@ -137,7 +137,7 @@ export class World {
       case Figure.fairy:
         return getPossibleFairyPlacements(this, player)
       case Figure.dragon:
-        return getPossibleDragonPlacements(this)
+        return getPossibleDragonPlacements(this, player)
       default:
         throw new Error('Unknown follower type')
     }

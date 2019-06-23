@@ -3,12 +3,29 @@ import { PlacedSegment } from './placed-segment'
 import { PlacedTile } from './placed-tile'
 import { Player } from '../player'
 
-// TODO convert to class with equals()
-export interface PlacedFigure {
+export class PlacedFigure {
 
-  readonly figure: Figure
-  readonly placedTile?: PlacedTile
-  readonly placedSegment?: PlacedSegment
-  readonly player: Player
+  public static placedOnSegment(
+    figure: Figure,
+    placedSegment: PlacedSegment,
+    player: Player,
+  ): PlacedFigure {
+    return new PlacedFigure(figure, player, placedSegment)
+  }
+
+  public static placedOnTile(
+    figure: Figure,
+    placedTile: PlacedTile,
+    player: Player
+  ): PlacedFigure {
+    return new PlacedFigure(figure, player, undefined, placedTile)
+  }
+
+  private constructor(
+    public readonly figure: Figure,
+    public readonly player: Player,
+    public readonly placedSegment?: PlacedSegment,
+    public readonly placedTile?: PlacedTile,
+  ) {}
 
 }

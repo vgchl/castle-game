@@ -16,7 +16,7 @@ export function getPossibleFollowerPlacements (world: World, figure: Figure, pla
 export function getPossibleBuilderPlacements (world: World, placedTile: PlacedTile, player: Player): List<PlacedFigure> {
   return placedTile.placedSegments
     .filter(segment => world.getConnectedSegments(segment!).some(segment => world.isOccupied(segment!, player)))
-    .map(placedSegment => ({ figure: Figure.builder, placedSegment } as PlacedFigure))
+    .map(placedSegment => PlacedFigure.placedOnSegment(Figure.builder, placedSegment!, player))
     .toList()
 }
 
@@ -27,10 +27,10 @@ export function getPossibleFairyPlacements (world: World, player: Player): List<
     .filter(placedFigure => placedFigure!.player === player && placedFigure!.placedTile !== fairyPlacedTile)
     .map(placedFigure => placedFigure!.placedTile)
     .reduce(uniqueBy(placedTile => placedTile!.position), List<PlacedTile>())
-    .map(placedTile => ({ figure: Figure.fairy, placedTile: placedTile! } as PlacedFigure)).toList()
+    .map(placedTile => PlacedFigure.placedOnTile(Figure.fairy, placedTile!, player)).toList()
 }
 
-export function getPossibleDragonPlacements (world: World): List<PlacedFigure> {
+export function getPossibleDragonPlacements (world: World, player: Player): List<PlacedFigure> {
   let dragonPlacedTile = world.getPlacedTileFor(Figure.dragon)
 
   if (!dragonPlacedTile) {
@@ -41,6 +41,6 @@ export function getPossibleDragonPlacements (world: World): List<PlacedFigure> {
 
   return dragonPlacedTile.position.getNeighbours(Direction.cardinals)
     .filter(position => world.tiles.has(position!) && (!fairyPlacedTile || !position!.equals(fairyPlacedTile.position)))
-    .map(position => ({ figure: Figure.dragon, placedTile: world.tiles.get(position!) } as PlacedFigure))
+    .map(position => PlacedFigure.placedOnTile(Figure.dragon, world.tiles.get(position!), player))
     .toList()
 }
