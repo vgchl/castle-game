@@ -15,4 +15,6 @@ var turn_part_1 = require("./turn-part");
 exports.TurnPart = turn_part_1.TurnPart;
 var turn_1 = require("./turn");
 exports.Turn = turn_1.Turn;
+var color_1 = require("./color");
+exports.Color = color_1.Color;
 //# sourceMappingURL=index.js.map

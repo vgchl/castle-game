@@ -1,1 +1,1 @@
-{"version":3,"file":"player.js","sourceRoot":"","sources":["../src/castle/player.ts"],"names":[],"mappings":";;AAAA,MAAa,MAAM;IACjB,YAA6B,IAAY,EACZ,KAAa;QADb,SAAI,GAAJ,IAAI,CAAQ;QACZ,UAAK,GAAL,KAAK,CAAQ;IAAG,CAAC;CAC/C;AAHD,wBAGC"}
+{"version":3,"file":"player.js","sourceRoot":"","sources":["../src/castle/player.ts"],"names":[],"mappings":";;AAEA,MAAa,MAAM;IACjB,YAA6B,IAAY,EACZ,KAAY;QADZ,SAAI,GAAJ,IAAI,CAAQ;QACZ,UAAK,GAAL,KAAK,CAAO;IAAG,CAAC;CAC9C;AAHD,wBAGC"}
