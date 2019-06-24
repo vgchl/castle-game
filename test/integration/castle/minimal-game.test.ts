@@ -1,5 +1,5 @@
 import { List, Map } from 'immutable'
-import { Direction, Game, PlacedTile, Player, TileD, World } from '../../../src/castle'
+import { Direction, Game, PlacedTile, Player, TileD, World, Color } from '../../../src/castle'
 import { ConfirmAction } from '../../../src/castle/phases/actions/confirm-action'
 import { PlaceFigureAction } from '../../../src/castle/phases/actions/place-figure-action'
 import { PlaceTileAction } from '../../../src/castle/phases/actions/place-tile-action'
@@ -12,8 +12,8 @@ import { Position } from '../../../src/castle/world/position'
 
 describe('A minimal game', () => {
   let game: Game
-  let playerAlice: Player = new Player('Alice', 'red')
-  let playerBob: Player = new Player('Bob', 'blue')
+  let playerAlice: Player = new Player('Alice', Color.Red)
+  let playerBob: Player = new Player('Bob', Color.Blue)
 
   describe('when the game starts', () => {
     beforeEach(() => {
