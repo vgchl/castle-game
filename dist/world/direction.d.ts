@@ -14,12 +14,10 @@ export declare class Direction {
      * The four primary directions: north, east, south and west.
      */
     static readonly cardinals: List<Direction>;
-    static readonly principals: Direction[];
+    static readonly principals: List<Direction>;
     private static readonly all;
     private constructor();
     readonly radians: number;
     getOpposite(): Direction;
-    relativeTo(direction: Direction): Direction;
     toString(): string;
-    private getByIndex;
 }

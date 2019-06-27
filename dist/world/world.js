@@ -43,6 +43,7 @@ class World {
      * @returns Whether the tile can be placed
      */
     canPlaceTile(tile, position, orientation) {
+        const placedTile = new placed_tile_1.PlacedTile(tile, position, orientation);
         return direction_1.Direction.cardinals.every(direction => {
             direction = direction;
             let neighbourTile = this.tiles.get(position.getNeighbour(direction));
@@ -50,7 +51,7 @@ class World {
                 return true;
             }
             let neighbourEdge = neighbourTile.getEdge(direction.getOpposite());
-            return tile.edges.get(direction.relativeTo(orientation)).canConnectTo(neighbourEdge);
+            return placedTile.getEdge(direction).canConnectTo(neighbourEdge);
         });
     }
     /**

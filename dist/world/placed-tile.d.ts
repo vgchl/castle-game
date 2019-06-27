@@ -13,5 +13,7 @@ export declare class PlacedTile {
     readonly placedSegments: List<PlacedSegment>;
     getEdgesWithSegment(segment: Segment): Map<Direction, TileEdge>;
     getEdge(direction: Direction): TileEdge;
+    private tileToWorldDirection;
+    private worldToTileDirection;
     equals(other: PlacedTile): boolean;
 }

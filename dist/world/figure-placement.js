@@ -8,7 +8,7 @@ const collection_util_1 = require("../utils/collection-util");
 function getPossibleFollowerPlacements(world, figure, placedTile, player) {
     return placedTile.placedSegments
         .filter(segment => world.getConnectedSegments(segment).every(segment => !world.isOccupied(segment)))
-        .map(segment => ({ figure, placedSegment: segment, player })).toList();
+        .map(segment => placed_figure_1.PlacedFigure.placedOnSegment(figure, segment, player)).toList();
 }
 exports.getPossibleFollowerPlacements = getPossibleFollowerPlacements;
 function getPossibleBuilderPlacements(world, placedTile, player) {

@@ -11,16 +11,11 @@ class Direction {
         return this.degrees * DEG_TO_RAD;
     }
     getOpposite() {
-        return this.getByIndex(Direction.all.indexOf(this) + (Direction.all.length / 2));
-    }
-    relativeTo(direction) {
-        return this.getByIndex(Direction.all.indexOf(this) - Direction.all.indexOf(direction));
+        const index = Direction.all.indexOf(this) + (Direction.all.size / 2);
+        return Direction.all.get(index % Direction.all.size);
     }
     toString() {
         return this.label;
-    }
-    getByIndex(index) {
-        return Direction.all[(Direction.all.length + index) % Direction.all.length];
     }
 }
 Direction.north = new Direction('north', 0);
@@ -40,7 +35,7 @@ Direction.cardinals = immutable_1.List([
     Direction.south,
     Direction.west
 ]);
-Direction.principals = [
+Direction.principals = immutable_1.List([
     Direction.north,
     Direction.northeast,
     Direction.east,
@@ -49,7 +44,7 @@ Direction.principals = [
     Direction.southwest,
     Direction.west,
     Direction.northwest
-];
+]);
 Direction.all = Direction.principals;
 exports.Direction = Direction;
 //# sourceMappingURL=direction.js.map
