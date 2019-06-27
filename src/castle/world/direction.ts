@@ -22,7 +22,7 @@ export class Direction {
     Direction.west
   ])
 
-  public static readonly principals: Direction[] = [
+  public static readonly principals: List<Direction> = List([
     Direction.north,
     Direction.northeast,
     Direction.east,
@@ -31,9 +31,9 @@ export class Direction {
     Direction.southwest,
     Direction.west,
     Direction.northwest
-  ]
+  ])
 
-  private static readonly all: Direction[] = Direction.principals
+  private static readonly all: List<Direction> = Direction.principals
 
   private constructor (private label: string, public readonly degrees: number) { }
 
@@ -42,18 +42,12 @@ export class Direction {
   }
 
   public getOpposite (): Direction {
-    return this.getByIndex(Direction.all.indexOf(this) + (Direction.all.length / 2))
-  }
-
-  public relativeTo (direction: Direction) {
-    return this.getByIndex(Direction.all.indexOf(this) - Direction.all.indexOf(direction))
+    const index = Direction.all.indexOf(this) + (Direction.all.size / 2)
+    return Direction.all.get(index % Direction.all.size)
   }
 
   public toString (): string {
     return this.label
   }
 
-  private getByIndex (index: number): Direction {
-    return Direction.all[(Direction.all.length + index) % Direction.all.length]
-  }
 }

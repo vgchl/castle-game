@@ -9,6 +9,6 @@ export class PlacedSegment {
     if (!other) {
       return false
     }
-    return this.segment === other.segment && this.placedTile.equals(other.placedTile)
+    return this.segment.id === other.segment.id && this.placedTile.equals(other.placedTile)
   }
 }

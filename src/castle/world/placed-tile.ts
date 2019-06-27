@@ -17,12 +17,26 @@ export class PlacedTile {
 
   public getEdgesWithSegment (segment: Segment): Map<Direction, TileEdge> {
     return this.tile.getEdgesWithSegment(segment)
-      .mapKeys(direction => direction!.relativeTo(this.orientation))
+      .mapKeys(direction => this.tileToWorldDirection(direction!))
       .toMap()
   }
 
   public getEdge (direction: Direction): TileEdge {
-    return this.tile.edges.get(direction.relativeTo(this.orientation))
+    return this.tile.edges.get(this.worldToTileDirection(direction))
+  }
+
+  private tileToWorldDirection (direction: Direction): Direction {
+    const indexTile = Direction.cardinals.indexOf(direction)
+    const indexOrientation = Direction.cardinals.indexOf(this.orientation)
+    const index = (indexOrientation + indexTile) % Direction.cardinals.size
+    return Direction.cardinals.get(index)
+  }
+
+  private worldToTileDirection (direction: Direction): Direction {
+    const indexTile = Direction.cardinals.indexOf(direction)
+    const indexOrientation = Direction.cardinals.indexOf(this.orientation)
+    const index = (Direction.cardinals.size + indexTile - indexOrientation) % Direction.cardinals.size
+    return Direction.cardinals.get(index)
   }
 
   public equals (other: PlacedTile): boolean {

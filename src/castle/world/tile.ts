@@ -3,14 +3,16 @@ import { Segment } from './segment'
 import { Direction } from './direction'
 import { Map, List } from 'immutable'
 
-export class Tile {
+export abstract class Tile {
   public readonly edges: Map<Direction, TileEdge>
 
-  constructor (edgeN: TileEdge,
+  constructor (
+    edgeN: TileEdge,
     edgeE: TileEdge,
     edgeS: TileEdge,
     edgeW: TileEdge,
-               public readonly segments: List<Segment>) {
+    public readonly segments: List<Segment>
+  ) {
     this.edges = Map([
       [Direction.north, edgeN],
       [Direction.east, edgeE],

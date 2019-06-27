@@ -58,6 +58,7 @@ export class World {
    * @returns Whether the tile can be placed
    */
   public canPlaceTile (tile: Tile, position: Position, orientation: Direction): boolean {
+    const placedTile = new PlacedTile(tile, position, orientation)
     return Direction.cardinals.every(direction => {
       direction = direction!
       let neighbourTile = this.tiles.get(position.getNeighbour(direction))
@@ -65,7 +66,7 @@ export class World {
         return true
       }
       let neighbourEdge = neighbourTile.getEdge(direction.getOpposite())
-      return tile.edges.get(direction.relativeTo(orientation)).canConnectTo(neighbourEdge)
+      return placedTile.getEdge(direction).canConnectTo(neighbourEdge)
     })
   }
 

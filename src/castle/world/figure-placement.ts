@@ -10,7 +10,7 @@ import { uniqueBy } from '../utils/collection-util'
 export function getPossibleFollowerPlacements (world: World, figure: Figure, placedTile: PlacedTile, player: Player): List<PlacedFigure> {
   return placedTile.placedSegments
     .filter(segment => world.getConnectedSegments(segment!).every(segment => !world.isOccupied(segment!)))
-    .map(segment => ({ figure, placedSegment: segment!, player })).toList()
+    .map(segment => PlacedFigure.placedOnSegment(figure, segment!, player)).toList()
 }
 
 export function getPossibleBuilderPlacements (world: World, placedTile: PlacedTile, player: Player): List<PlacedFigure> {
