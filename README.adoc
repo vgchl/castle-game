@@ -4,4 +4,4 @@ image:https://cloud.drone.io/api/badges/castle-game/castle-game/status.svg[Build
 image:https://snyk.io/test/github/castle-game/castle-game/badge.svg[Vulnerabilities, link=https://snyk.io/test/github/castle-game/castle-game]
 image:https://img.shields.io/badge/code_style-standard-brightgreen.svg[JavaScript Style Guide, link=https://standardjs.com]
 
-Provides the game logic for Castle.
+Provides the game logic for Castle. Used by Castle's web client ([castle-web](https://github.com/vgchl/castle-web)).
